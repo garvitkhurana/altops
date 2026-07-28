@@ -1,0 +1,193 @@
+{
+  "facility": {
+    "borrower": "Meridian Packaging Holdings, LLC",
+    "administrative_agent": "Sterling Agency Services, LLC",
+    "closing_date": "2024-06-28",
+    "maturity_date": "2030-06-28",
+    "tranches": {
+      "Revolving Credit Facility": 75000000,
+      "Term Loan A": 150000000,
+      "Delayed Draw Term Loan": 50000000
+    },
+    "benchmark": "Term SOFR",
+    "pricing_grid": [
+      {
+        "min_leverage": 5.0,
+        "max_leverage": null,
+        "margin": 5.75
+      },
+      {
+        "min_leverage": 4.0,
+        "max_leverage": 5.0,
+        "margin": 5.25
+      },
+      {
+        "min_leverage": 3.0,
+        "max_leverage": 4.0,
+        "margin": 4.75
+      },
+      {
+        "min_leverage": null,
+        "max_leverage": 3.0,
+        "margin": 4.25
+      }
+    ],
+    "base_rate_margin_reduction": 1.0,
+    "credit_spread_adjustment": {
+      "1": 0.1,
+      "3": 0.15,
+      "6": 0.25
+    },
+    "permitted_interest_periods": [
+      1,
+      3,
+      6
+    ],
+    "day_count_sofr": 360,
+    "day_count_base": 365,
+    "minimum_borrowing": 1000000,
+    "borrowing_multiple": 500000,
+    "notice_days_sofr": 3,
+    "notice_days_base": 0,
+    "commitment_fee_bps": 50,
+    "lc_sublimit": 15000000,
+    "current_leverage": 5.2,
+    "drawn": {
+      "Revolving Credit Facility": 22000000,
+      "Term Loan A": 150000000,
+      "Delayed Draw Term Loan": 20000000
+    },
+    "outstanding_lcs": 6500000
+  },
+  "documents": {
+    "CreditAgreement_Meridian_Packaging.pdf": {
+      "doc_type": "credit_agreement"
+    },
+    "BorrowingNotice_01.pdf": {
+      "doc_type": "borrowing_notice",
+      "notice_id": 1,
+      "request_date": "2026-06-01",
+      "borrowing_date": "2026-06-04",
+      "tranche": "Revolving Credit Facility",
+      "amount": 5000000,
+      "rate_type": "SOFR Loan",
+      "interest_period": 3,
+      "seeded_issue": "clean"
+    },
+    "BorrowingNotice_02.pdf": {
+      "doc_type": "borrowing_notice",
+      "notice_id": 2,
+      "request_date": "2026-06-15",
+      "borrowing_date": "2026-06-18",
+      "tranche": "Revolving Credit Facility",
+      "amount": 3000000,
+      "rate_type": "SOFR Loan",
+      "interest_period": 2,
+      "seeded_issue": "interest period not permitted"
+    },
+    "BorrowingNotice_03.pdf": {
+      "doc_type": "borrowing_notice",
+      "notice_id": 3,
+      "request_date": "2026-06-22",
+      "borrowing_date": "2026-06-25",
+      "tranche": "Revolving Credit Facility",
+      "amount": 1250000,
+      "rate_type": "SOFR Loan",
+      "interest_period": 1,
+      "seeded_issue": "not an integral multiple of 500,000"
+    },
+    "BorrowingNotice_04.pdf": {
+      "doc_type": "borrowing_notice",
+      "notice_id": 4,
+      "request_date": "2026-07-06",
+      "borrowing_date": "2026-07-07",
+      "tranche": "Revolving Credit Facility",
+      "amount": 4000000,
+      "rate_type": "SOFR Loan",
+      "interest_period": 3,
+      "seeded_issue": "only 1 day notice, agreement requires 3"
+    },
+    "BorrowingNotice_05.pdf": {
+      "doc_type": "borrowing_notice",
+      "notice_id": 5,
+      "request_date": "2026-07-13",
+      "borrowing_date": "2026-07-16",
+      "tranche": "Revolving Credit Facility",
+      "amount": 48000000,
+      "rate_type": "SOFR Loan",
+      "interest_period": 3,
+      "seeded_issue": "exceeds availability"
+    },
+    "BorrowingNotice_06.pdf": {
+      "doc_type": "borrowing_notice",
+      "notice_id": 6,
+      "request_date": "2026-07-20",
+      "borrowing_date": "2026-07-23",
+      "tranche": "Delayed Draw Term Loan",
+      "amount": 10000000,
+      "rate_type": "SOFR Loan",
+      "interest_period": 6,
+      "seeded_issue": "clean"
+    },
+    "AgentNotice_01.pdf": {
+      "doc_type": "agent_notice",
+      "notice_id": 1,
+      "borrowing_date": "2026-06-04",
+      "tranche": "Revolving Credit Facility",
+      "amount": 5000000,
+      "interest_period": 3,
+      "sofr": 4.3215,
+      "csa": 0.15,
+      "margin": 5.75,
+      "days": 91,
+      "day_count": 360,
+      "interest": 129188.4,
+      "seeded_issue": "correct"
+    },
+    "AgentNotice_02.pdf": {
+      "doc_type": "agent_notice",
+      "notice_id": 2,
+      "borrowing_date": "2026-06-18",
+      "tranche": "Revolving Credit Facility",
+      "amount": 3000000,
+      "interest_period": 3,
+      "sofr": 4.3215,
+      "csa": 0.15,
+      "margin": 5.25,
+      "days": 91,
+      "day_count": 360,
+      "interest": 73721.38,
+      "seeded_issue": "wrong margin: used 4.00-5.00x tier at 5.20x"
+    },
+    "AgentNotice_03.pdf": {
+      "doc_type": "agent_notice",
+      "notice_id": 3,
+      "borrowing_date": "2026-06-25",
+      "tranche": "Revolving Credit Facility",
+      "amount": 1250000,
+      "interest_period": 1,
+      "sofr": 4.3215,
+      "csa": 0.1,
+      "margin": 5.75,
+      "days": 30,
+      "day_count": 365,
+      "interest": 10450.17,
+      "seeded_issue": "wrong day count: 365 on a SOFR loan"
+    },
+    "AgentNotice_04.pdf": {
+      "doc_type": "agent_notice",
+      "notice_id": 4,
+      "borrowing_date": "2026-07-07",
+      "tranche": "Revolving Credit Facility",
+      "amount": 4000000,
+      "interest_period": 3,
+      "sofr": 4.3215,
+      "csa": 0.0,
+      "margin": 5.75,
+      "days": 91,
+      "day_count": 360,
+      "interest": 101834.06,
+      "seeded_issue": "credit spread adjustment omitted"
+    }
+  }
+}

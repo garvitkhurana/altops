@@ -1,0 +1,1651 @@
+{
+  "results": [
+    {
+      "file": "Ardent_III_CapAcct_2025-12-31.pdf",
+      "doc_type": "capital_account_statement",
+      "classification": {
+        "doc_type": "capital_account_statement",
+        "confidence": 0.95,
+        "reason": "Document explicitly titled 'Capital Account Statement' with periodic balance roll-forward details."
+      },
+      "fields": {
+        "fund_name": {
+          "value": "Ardent Growth Fund III LP",
+          "confidence": 1.0,
+          "quote": "Ardent Growth Fund III LP"
+        },
+        "gp_manager": {
+          "value": "Ardent Partners LLP",
+          "confidence": 1.0,
+          "quote": "Ardent Partners LLP"
+        },
+        "period_end": {
+          "value": "2025-12-31",
+          "confidence": 1.0,
+          "quote": "31 December 2025"
+        },
+        "currency": {
+          "value": "USD",
+          "confidence": 1.0,
+          "quote": "USD"
+        },
+        "beginning_nav": {
+          "value": 1352954.05,
+          "confidence": 1.0,
+          "quote": "USD 1,352,954.05"
+        },
+        "contributions": {
+          "value": 209561.7,
+          "confidence": 1.0,
+          "quote": "USD 209,561.70"
+        },
+        "distributions": {
+          "value": -55700.45,
+          "confidence": 1.0,
+          "quote": "(USD 55,700.45)"
+        },
+        "realized_gain": {
+          "value": 35404.28,
+          "confidence": 1.0,
+          "quote": "USD 35,404.28"
+        },
+        "unrealized_change": {
+          "value": 170821.13,
+          "confidence": 1.0,
+          "quote": "USD 170,821.13"
+        },
+        "management_fee": {
+          "value": -6691.63,
+          "confidence": 1.0,
+          "quote": "(USD 6,691.63)"
+        },
+        "carried_interest": {
+          "value": -41245.08,
+          "confidence": 1.0,
+          "quote": "(USD 41,245.08)"
+        },
+        "ending_nav": {
+          "value": 1665104.0,
+          "confidence": 1.0,
+          "quote": "USD 1,665,104.00"
+        }
+      },
+      "checks": [
+        {
+          "check": "capital account roll-forward ties",
+          "status": "pass",
+          "detail": "ties at 1,665,104.00"
+        }
+      ],
+      "triage": {
+        "status": "auto_posted",
+        "reasons": []
+      }
+    },
+    {
+      "file": "Ardent_III_CapAcct_2026-03-31.pdf",
+      "doc_type": "capital_account_statement",
+      "classification": {
+        "doc_type": "capital_account_statement",
+        "confidence": 0.95,
+        "reason": "Document title explicitly states 'Capital Account Statement' and contains detailed capital account roll-forward data."
+      },
+      "fields": {
+        "fund_name": {
+          "value": "Ardent Growth Fund III LP",
+          "confidence": 1.0,
+          "quote": "Ardent Growth Fund III LP"
+        },
+        "gp_manager": {
+          "value": "Ardent Partners LLP",
+          "confidence": 1.0,
+          "quote": "Ardent Partners LLP"
+        },
+        "period_end": {
+          "value": "2026-03-31",
+          "confidence": 1.0,
+          "quote": "31 March 2026"
+        },
+        "currency": {
+          "value": "USD",
+          "confidence": 1.0,
+          "quote": "USD"
+        },
+        "beginning_nav": {
+          "value": 1513545.71,
+          "confidence": 1.0,
+          "quote": "USD 1,513,545.71"
+        },
+        "contributions": {
+          "value": 183506.16,
+          "confidence": 1.0,
+          "quote": "USD 183,506.16"
+        },
+        "distributions": {
+          "value": -119713.3,
+          "confidence": 1.0,
+          "quote": "(USD 119,713.30)"
+        },
+        "realized_gain": {
+          "value": 94022.82,
+          "confidence": 1.0,
+          "quote": "USD 94,022.82"
+        },
+        "unrealized_change": {
+          "value": 8461.91,
+          "confidence": 1.0,
+          "quote": "USD 8,461.91"
+        },
+        "management_fee": {
+          "value": -7177.33,
+          "confidence": 1.0,
+          "quote": "(USD 7,177.33)"
+        },
+        "carried_interest": {
+          "value": -20496.95,
+          "confidence": 1.0,
+          "quote": "(USD 20,496.95)"
+        },
+        "ending_nav": {
+          "value": 1652149.02,
+          "confidence": 1.0,
+          "quote": "USD 1,652,149.02"
+        }
+      },
+      "checks": [
+        {
+          "check": "capital account roll-forward ties",
+          "status": "pass",
+          "detail": "ties at 1,652,149.02"
+        }
+      ],
+      "triage": {
+        "status": "auto_posted",
+        "reasons": []
+      }
+    },
+    {
+      "file": "Ardent_III_CapitalCall_01.pdf",
+      "doc_type": "capital_call",
+      "classification": {
+        "doc_type": "capital_call",
+        "confidence": 0.95,
+        "reason": "The document is a drawdown notice requiring the LP to send funds, which aligns with the capital_call category."
+      },
+      "fields": {
+        "fund_name": {
+          "value": "Ardent Growth Fund III LP",
+          "confidence": 1.0,
+          "quote": "Ardent Growth Fund III LP"
+        },
+        "gp_manager": {
+          "value": "Ardent Partners LLP",
+          "confidence": 1.0,
+          "quote": "Ardent Partners LLP"
+        },
+        "notice_date": {
+          "value": "2025-05-14",
+          "confidence": 1.0,
+          "quote": "14 May 2025"
+        },
+        "due_date": {
+          "value": "2025-05-24",
+          "confidence": 1.0,
+          "quote": "24 May 2025"
+        },
+        "call_number": {
+          "value": 1,
+          "confidence": 1.0,
+          "quote": "No. 1"
+        },
+        "amount": {
+          "value": 481503.38,
+          "confidence": 1.0,
+          "quote": "USD 481,503.38"
+        },
+        "currency": {
+          "value": "USD",
+          "confidence": 1.0,
+          "quote": "USD"
+        },
+        "commitment": {
+          "value": 3000000.0,
+          "confidence": 1.0,
+          "quote": "USD 3,000,000.00"
+        },
+        "cumulative_called": {
+          "value": 481503.38,
+          "confidence": 1.0,
+          "quote": "USD 481,503.38"
+        },
+        "unfunded_commitment": {
+          "value": 2518496.62,
+          "confidence": 1.0,
+          "quote": "USD 2,518,496.62"
+        },
+        "purpose_investments": {
+          "value": 442362.04,
+          "confidence": 1.0,
+          "quote": "Portfolio investments USD 442,362.04"
+        },
+        "purpose_management_fee": {
+          "value": 33451.85,
+          "confidence": 1.0,
+          "quote": "Management fee USD 33,451.85"
+        },
+        "purpose_expenses": {
+          "value": 5689.49,
+          "confidence": 1.0,
+          "quote": "Partnership expenses USD 5,689.49"
+        }
+      },
+      "checks": [
+        {
+          "check": "purpose components sum to call amount",
+          "status": "pass",
+          "detail": "ties at 481,503.38"
+        },
+        {
+          "check": "unfunded = commitment - cumulative called",
+          "status": "pass",
+          "detail": "ties at 2,518,496.62"
+        },
+        {
+          "check": "call amount does not exceed unfunded commitment",
+          "status": "pass",
+          "detail": "481,503.38 <= 3,000,000.00"
+        },
+        {
+          "check": "notice_date on or before due_date",
+          "status": "pass",
+          "detail": "2025-05-14 -> 2025-05-24"
+        }
+      ],
+      "triage": {
+        "status": "auto_posted",
+        "reasons": []
+      }
+    },
+    {
+      "file": "Ardent_III_CapitalCall_02.pdf",
+      "doc_type": "capital_call",
+      "classification": {
+        "doc_type": "capital_call",
+        "confidence": 0.95,
+        "reason": "The document is a drawdown notice requiring the LP to send funds to the GP."
+      },
+      "fields": {
+        "fund_name": {
+          "value": "Ardent Growth Fund III LP",
+          "confidence": 1.0,
+          "quote": "Ardent Growth Fund III LP"
+        },
+        "gp_manager": {
+          "value": "Ardent Partners LLP",
+          "confidence": 1.0,
+          "quote": "Ardent Partners LLP"
+        },
+        "notice_date": {
+          "value": "2026-04-26",
+          "confidence": 1.0,
+          "quote": "26 April 2026"
+        },
+        "due_date": {
+          "value": "2026-05-11",
+          "confidence": 1.0,
+          "quote": "11 May 2026"
+        },
+        "call_number": {
+          "value": 2,
+          "confidence": 1.0,
+          "quote": "No. 2"
+        },
+        "amount": {
+          "value": 467671.39,
+          "confidence": 1.0,
+          "quote": "USD 467,671.39"
+        },
+        "currency": {
+          "value": "USD",
+          "confidence": 1.0,
+          "quote": "USD"
+        },
+        "commitment": {
+          "value": 3000000.0,
+          "confidence": 1.0,
+          "quote": "USD 3,000,000.00"
+        },
+        "cumulative_called": {
+          "value": 949174.77,
+          "confidence": 1.0,
+          "quote": "USD 949,174.77"
+        },
+        "unfunded_commitment": {
+          "value": 2050825.23,
+          "confidence": 1.0,
+          "quote": "USD 2,050,825.23"
+        },
+        "purpose_investments": {
+          "value": 437329.05,
+          "confidence": 1.0,
+          "quote": "Portfolio investments USD 437,329.05"
+        },
+        "purpose_management_fee": {
+          "value": 25170.77,
+          "confidence": 1.0,
+          "quote": "Management fee USD 25,170.77"
+        },
+        "purpose_expenses": {
+          "value": 5171.57,
+          "confidence": 1.0,
+          "quote": "Partnership expenses USD 5,171.57"
+        }
+      },
+      "checks": [
+        {
+          "check": "purpose components sum to call amount",
+          "status": "pass",
+          "detail": "ties at 467,671.39"
+        },
+        {
+          "check": "unfunded = commitment - cumulative called",
+          "status": "pass",
+          "detail": "ties at 2,050,825.23"
+        },
+        {
+          "check": "call amount does not exceed unfunded commitment",
+          "status": "pass",
+          "detail": "467,671.39 <= 2,518,496.62"
+        },
+        {
+          "check": "notice_date on or before due_date",
+          "status": "pass",
+          "detail": "2026-04-26 -> 2026-05-11"
+        }
+      ],
+      "triage": {
+        "status": "auto_posted",
+        "reasons": []
+      }
+    },
+    {
+      "file": "Ardent_III_CapitalCall_03.pdf",
+      "doc_type": "capital_call",
+      "classification": {
+        "doc_type": "capital_call",
+        "confidence": 0.95,
+        "reason": "The document is a GP requesting funds from the LP with a drawdown notice."
+      },
+      "fields": {
+        "fund_name": {
+          "value": "Ardent Growth Fund III LP",
+          "confidence": 1.0,
+          "quote": "Ardent Growth Fund III LP"
+        },
+        "gp_manager": {
+          "value": "Ardent Partners LLP",
+          "confidence": 1.0,
+          "quote": "Ardent Partners LLP"
+        },
+        "notice_date": {
+          "value": "2026-06-12",
+          "confidence": 1.0,
+          "quote": "12 June 2026"
+        },
+        "due_date": {
+          "value": "2026-06-22",
+          "confidence": 1.0,
+          "quote": "22 June 2026"
+        },
+        "call_number": {
+          "value": 3,
+          "confidence": 1.0,
+          "quote": "No. 3"
+        },
+        "amount": {
+          "value": 351852.59,
+          "confidence": 1.0,
+          "quote": "USD 351,852.59"
+        },
+        "currency": {
+          "value": "USD",
+          "confidence": 1.0,
+          "quote": "USD"
+        },
+        "commitment": {
+          "value": 3000000.0,
+          "confidence": 1.0,
+          "quote": "USD 3,000,000.00"
+        },
+        "cumulative_called": {
+          "value": 1301027.36,
+          "confidence": 1.0,
+          "quote": "USD 1,301,027.36"
+        },
+        "unfunded_commitment": {
+          "value": 1698972.64,
+          "confidence": 1.0,
+          "quote": "USD 1,698,972.64"
+        },
+        "purpose_investments": {
+          "value": 326974.15,
+          "confidence": 1.0,
+          "quote": "Portfolio investments USD 326,974.15"
+        },
+        "purpose_management_fee": {
+          "value": 19907.31,
+          "confidence": 1.0,
+          "quote": "Management fee USD 19,907.31"
+        },
+        "purpose_expenses": {
+          "value": 4971.13,
+          "confidence": 1.0,
+          "quote": "Partnership expenses USD 4,971.13"
+        }
+      },
+      "checks": [
+        {
+          "check": "purpose components sum to call amount",
+          "status": "pass",
+          "detail": "ties at 351,852.59"
+        },
+        {
+          "check": "unfunded = commitment - cumulative called",
+          "status": "pass",
+          "detail": "ties at 1,698,972.64"
+        },
+        {
+          "check": "call amount does not exceed unfunded commitment",
+          "status": "pass",
+          "detail": "351,852.59 <= 2,050,825.23"
+        },
+        {
+          "check": "notice_date on or before due_date",
+          "status": "pass",
+          "detail": "2026-06-12 -> 2026-06-22"
+        }
+      ],
+      "triage": {
+        "status": "auto_posted",
+        "reasons": []
+      }
+    },
+    {
+      "file": "Ardent_III_CapitalCall_04.pdf",
+      "doc_type": "capital_call",
+      "classification": {
+        "doc_type": "capital_call",
+        "confidence": 0.95,
+        "reason": "The document requests funds from the LP for a drawdown, matching the capital call definition."
+      },
+      "fields": {
+        "fund_name": {
+          "value": "Ardent Growth Fund III LP",
+          "confidence": 1.0,
+          "quote": "Ardent Growth Fund III LP"
+        },
+        "gp_manager": {
+          "value": "Ardent Partners LLP",
+          "confidence": 1.0,
+          "quote": "Ardent Partners LLP"
+        },
+        "notice_date": {
+          "value": "2026-07-26",
+          "confidence": 1.0,
+          "quote": "26 July 2026"
+        },
+        "due_date": {
+          "value": "2026-08-03",
+          "confidence": 1.0,
+          "quote": "03 August 2026"
+        },
+        "call_number": {
+          "value": 4,
+          "confidence": 1.0,
+          "quote": "No. 4"
+        },
+        "amount": {
+          "value": 355407.19,
+          "confidence": 1.0,
+          "quote": "USD 355,407.19"
+        },
+        "currency": {
+          "value": "USD",
+          "confidence": 1.0,
+          "quote": "USD"
+        },
+        "commitment": {
+          "value": 3000000.0,
+          "confidence": 1.0,
+          "quote": "USD 3,000,000.00"
+        },
+        "cumulative_called": {
+          "value": 1656434.55,
+          "confidence": 1.0,
+          "quote": "USD 1,656,434.55"
+        },
+        "unfunded_commitment": {
+          "value": 1343565.45,
+          "confidence": 1.0,
+          "quote": "USD 1,343,565.45"
+        },
+        "purpose_investments": {
+          "value": 330528.69,
+          "confidence": 1.0,
+          "quote": "Portfolio investments USD 330,528.69"
+        },
+        "purpose_management_fee": {
+          "value": 21324.43,
+          "confidence": 1.0,
+          "quote": "Management fee USD 21,324.43"
+        },
+        "purpose_expenses": {
+          "value": 3554.07,
+          "confidence": 1.0,
+          "quote": "Partnership expenses USD 3,554.07"
+        }
+      },
+      "checks": [
+        {
+          "check": "purpose components sum to call amount",
+          "status": "pass",
+          "detail": "ties at 355,407.19"
+        },
+        {
+          "check": "unfunded = commitment - cumulative called",
+          "status": "pass",
+          "detail": "ties at 1,343,565.45"
+        },
+        {
+          "check": "call amount does not exceed unfunded commitment",
+          "status": "pass",
+          "detail": "355,407.19 <= 1,698,972.64"
+        },
+        {
+          "check": "notice_date on or before due_date",
+          "status": "pass",
+          "detail": "2026-07-26 -> 2026-08-03"
+        }
+      ],
+      "triage": {
+        "status": "auto_posted",
+        "reasons": []
+      }
+    },
+    {
+      "file": "Ardent_III_Distribution_01.pdf",
+      "doc_type": "distribution",
+      "classification": {
+        "doc_type": "distribution",
+        "confidence": 0.95,
+        "reason": "Document explicitly states a fund distribution to the LP with detailed breakdown of capital and gains."
+      },
+      "fields": {
+        "fund_name": {
+          "value": "Ardent Growth Fund III LP",
+          "confidence": 1.0,
+          "quote": "Ardent Growth Fund III LP"
+        },
+        "gp_manager": {
+          "value": "Ardent Partners LLP",
+          "confidence": 1.0,
+          "quote": "Ardent Partners LLP"
+        },
+        "notice_date": {
+          "value": "2025-11-02",
+          "confidence": 1.0,
+          "quote": "02 November 2025"
+        },
+        "payment_date": {
+          "value": "2025-11-10",
+          "confidence": 1.0,
+          "quote": "10 November 2025"
+        },
+        "distribution_number": {
+          "value": 1,
+          "confidence": 1.0,
+          "quote": "No. 1"
+        },
+        "amount": {
+          "value": 241899.38,
+          "confidence": 1.0,
+          "quote": "USD 241,899.38"
+        },
+        "currency": {
+          "value": "USD",
+          "confidence": 1.0,
+          "quote": "USD"
+        },
+        "return_of_capital": {
+          "value": 112745.17,
+          "confidence": 1.0,
+          "quote": "USD 112,745.17"
+        },
+        "realized_gain": {
+          "value": 85312.24,
+          "confidence": 1.0,
+          "quote": "USD 85,312.24"
+        },
+        "investment_income": {
+          "value": 43841.97,
+          "confidence": 1.0,
+          "quote": "USD 43,841.97"
+        },
+        "recallable_amount": {
+          "value": 42228.55,
+          "confidence": 1.0,
+          "quote": "USD 42,228.55"
+        }
+      },
+      "checks": [
+        {
+          "check": "components sum to distribution amount",
+          "status": "pass",
+          "detail": "ties at 241,899.38"
+        },
+        {
+          "check": "recallable does not exceed return of capital",
+          "status": "pass",
+          "detail": "42,228.55 <= 112,745.17"
+        },
+        {
+          "check": "notice_date on or before payment_date",
+          "status": "pass",
+          "detail": "2025-11-02 -> 2025-11-10"
+        }
+      ],
+      "triage": {
+        "status": "auto_posted",
+        "reasons": []
+      }
+    },
+    {
+      "file": "Brookmont_IV_CapAcct_2025-12-31.pdf",
+      "doc_type": "capital_account_statement",
+      "classification": {
+        "doc_type": "capital_account_statement",
+        "confidence": 0.95,
+        "reason": "Document explicitly titled 'Capital Account Statement' with detailed roll-forward of capital account balances and activities."
+      },
+      "fields": {
+        "fund_name": {
+          "value": "Brookmont Capital Management, LLC",
+          "confidence": 0.95,
+          "quote": "Brookmont Capital Management, LLC"
+        },
+        "gp_manager": {
+          "value": "Brookmont Capital Management, LLC",
+          "confidence": 0.9,
+          "quote": "Brookmont Capital Management, LLC"
+        },
+        "period_end": {
+          "value": "2025-12-31",
+          "confidence": 1.0,
+          "quote": "December 31, 2025"
+        },
+        "currency": {
+          "value": "USD",
+          "confidence": 0.9,
+          "quote": "$"
+        },
+        "beginning_nav": {
+          "value": 1770470.13,
+          "confidence": 1.0,
+          "quote": "$1,770,470.13"
+        },
+        "contributions": {
+          "value": 298974.44,
+          "confidence": 1.0,
+          "quote": "$298,974.44"
+        },
+        "distributions": {
+          "value": -63146.61,
+          "confidence": 1.0,
+          "quote": "($63,146.61)"
+        },
+        "realized_gain": {
+          "value": 75372.95,
+          "confidence": 1.0,
+          "quote": "$75,372.95"
+        },
+        "unrealized_change": {
+          "value": 117868.99,
+          "confidence": 1.0,
+          "quote": "$117,868.99"
+        },
+        "management_fee": {
+          "value": -19205.03,
+          "confidence": 1.0,
+          "quote": "($19,205.03)"
+        },
+        "carried_interest": {
+          "value": -38648.39,
+          "confidence": 1.0,
+          "quote": "($38,648.39)"
+        },
+        "ending_nav": {
+          "value": 2141686.48,
+          "confidence": 1.0,
+          "quote": "$2,141,686.48"
+        }
+      },
+      "checks": [
+        {
+          "check": "capital account roll-forward ties",
+          "status": "pass",
+          "detail": "ties at 2,141,686.48"
+        }
+      ],
+      "triage": {
+        "status": "exception",
+        "reasons": [
+          "fund name unusable: this is the management company, not a fund (got 'Brookmont Capital Management, LLC')"
+        ]
+      }
+    },
+    {
+      "file": "Brookmont_IV_CapAcct_2026-03-31.pdf",
+      "doc_type": "capital_account_statement",
+      "classification": {
+        "doc_type": "capital_account_statement",
+        "confidence": 0.95,
+        "reason": "Document title and content explicitly describe a periodic capital account roll-forward with balance details."
+      },
+      "fields": {
+        "fund_name": {
+          "value": "Brookmont Capital Partners IV, L.P.",
+          "confidence": 1.0,
+          "quote": "Brookmont Capital Partners IV, L.P."
+        },
+        "gp_manager": {
+          "value": "Brookmont Capital Management, LLC",
+          "confidence": 1.0,
+          "quote": "Brookmont Capital Management, LLC"
+        },
+        "period_end": {
+          "value": "2026-03-31",
+          "confidence": 1.0,
+          "quote": "March 31, 2026"
+        },
+        "currency": {
+          "value": "USD",
+          "confidence": 1.0,
+          "quote": "$"
+        },
+        "beginning_nav": {
+          "value": 2185848.03,
+          "confidence": 1.0,
+          "quote": "$2,185,848.03"
+        },
+        "contributions": {
+          "value": 134123.9,
+          "confidence": 1.0,
+          "quote": "$134,123.90"
+        },
+        "distributions": {
+          "value": -125212.21,
+          "confidence": 1.0,
+          "quote": "($125,212.21)"
+        },
+        "realized_gain": {
+          "value": 3666.64,
+          "confidence": 1.0,
+          "quote": "$3,666.64"
+        },
+        "unrealized_change": {
+          "value": -37475.03,
+          "confidence": 1.0,
+          "quote": "$-37,475.03"
+        },
+        "management_fee": {
+          "value": -19310.84,
+          "confidence": 1.0,
+          "quote": "($19,310.84)"
+        },
+        "carried_interest": {
+          "value": 0.0,
+          "confidence": 1.0,
+          "quote": "($0.00)"
+        },
+        "ending_nav": {
+          "value": 2141640.49,
+          "confidence": 1.0,
+          "quote": "$2,141,640.49"
+        }
+      },
+      "checks": [
+        {
+          "check": "capital account roll-forward ties",
+          "status": "pass",
+          "detail": "ties at 2,141,640.49"
+        }
+      ],
+      "triage": {
+        "status": "auto_posted",
+        "reasons": []
+      }
+    },
+    {
+      "file": "Brookmont_IV_CapitalCall_01.pdf",
+      "doc_type": "capital_call",
+      "classification": {
+        "doc_type": "capital_call",
+        "confidence": 0.95,
+        "reason": "The document explicitly requests additional capital contributions from the limited partner with detailed funding amounts and usage breakdown."
+      },
+      "fields": {
+        "fund_name": {
+          "value": "Brookmont Capital Partners IV, L.P.",
+          "confidence": 1.0,
+          "quote": "Brookmont Capital Partners IV, L.P."
+        },
+        "gp_manager": {
+          "value": "Brookmont Capital Management, LLC",
+          "confidence": 1.0,
+          "quote": "Brookmont Capital Management, LLC"
+        },
+        "notice_date": {
+          "value": "2026-06-25",
+          "confidence": 1.0,
+          "quote": "June 25, 2026"
+        },
+        "due_date": {
+          "value": "2026-07-10",
+          "confidence": 1.0,
+          "quote": "July 10, 2026"
+        },
+        "call_number": {
+          "value": 1,
+          "confidence": 1.0,
+          "quote": "Call No. 1"
+        },
+        "amount": {
+          "value": 925067.62,
+          "confidence": 1.0,
+          "quote": "$925,067.62"
+        },
+        "currency": {
+          "value": "USD",
+          "confidence": 0.8,
+          "quote": ""
+        },
+        "commitment": {
+          "value": 5000000.0,
+          "confidence": 1.0,
+          "quote": "$5,000,000.00"
+        },
+        "cumulative_called": {
+          "value": 925067.62,
+          "confidence": 1.0,
+          "quote": "$925,067.62"
+        },
+        "unfunded_commitment": {
+          "value": 4074932.38,
+          "confidence": 1.0,
+          "quote": "$4,074,932.38"
+        },
+        "purpose_investments": {
+          "value": 852219.22,
+          "confidence": 1.0,
+          "quote": "$852,219.22"
+        },
+        "purpose_management_fee": {
+          "value": 64726.62,
+          "confidence": 1.0,
+          "quote": "$64,726.62"
+        },
+        "purpose_expenses": {
+          "value": 8121.78,
+          "confidence": 1.0,
+          "quote": "$8,121.78"
+        }
+      },
+      "checks": [
+        {
+          "check": "purpose components sum to call amount",
+          "status": "pass",
+          "detail": "ties at 925,067.62"
+        },
+        {
+          "check": "unfunded = commitment - cumulative called",
+          "status": "pass",
+          "detail": "ties at 4,074,932.38"
+        },
+        {
+          "check": "call amount does not exceed unfunded commitment",
+          "status": "pass",
+          "detail": "925,067.62 <= 5,000,000.00"
+        },
+        {
+          "check": "notice_date on or before due_date",
+          "status": "pass",
+          "detail": "2026-06-25 -> 2026-07-10"
+        }
+      ],
+      "triage": {
+        "status": "auto_posted",
+        "reasons": []
+      }
+    },
+    {
+      "file": "Brookmont_IV_CapitalCall_02.pdf",
+      "doc_type": "capital_call",
+      "classification": {
+        "doc_type": "capital_call",
+        "confidence": 0.95,
+        "reason": "Document is a formal notice requiring the LP to contribute funds, with explicit capital call details and payment instructions."
+      },
+      "fields": {
+        "fund_name": {
+          "value": "Brookmont Capital Partners IV, L.P.",
+          "confidence": 1.0,
+          "quote": "Brookmont Capital Partners IV, L.P."
+        },
+        "gp_manager": {
+          "value": "Brookmont Capital Management, LLC",
+          "confidence": 1.0,
+          "quote": "Brookmont Capital Management, LLC"
+        },
+        "notice_date": {
+          "value": "2025-05-21",
+          "confidence": 1.0,
+          "quote": "May 21, 2025"
+        },
+        "due_date": {
+          "value": "2025-05-31",
+          "confidence": 1.0,
+          "quote": "May 31, 2025"
+        },
+        "call_number": {
+          "value": 2,
+          "confidence": 1.0,
+          "quote": "Call No. 2"
+        },
+        "amount": {
+          "value": 737084.44,
+          "confidence": 1.0,
+          "quote": "$737,084.44"
+        },
+        "currency": {
+          "value": null,
+          "confidence": 0.0,
+          "quote": ""
+        },
+        "commitment": {
+          "value": 5000000.0,
+          "confidence": 1.0,
+          "quote": "$5,000,000.00"
+        },
+        "cumulative_called": {
+          "value": 1662152.06,
+          "confidence": 1.0,
+          "quote": "$1,662,152.06"
+        },
+        "unfunded_commitment": {
+          "value": 3337847.94,
+          "confidence": 1.0,
+          "quote": "$3,337,847.94"
+        },
+        "purpose_investments": {
+          "value": 694141.03,
+          "confidence": 1.0,
+          "quote": "$694,141.03"
+        },
+        "purpose_management_fee": {
+          "value": 38693.26,
+          "confidence": 1.0,
+          "quote": "$38,693.26"
+        },
+        "purpose_expenses": {
+          "value": 4250.15,
+          "confidence": 1.0,
+          "quote": "$4,250.15"
+        }
+      },
+      "checks": [
+        {
+          "check": "purpose components sum to call amount",
+          "status": "pass",
+          "detail": "ties at 737,084.44"
+        },
+        {
+          "check": "unfunded = commitment - cumulative called",
+          "status": "pass",
+          "detail": "ties at 3,337,847.94"
+        },
+        {
+          "check": "call amount does not exceed unfunded commitment",
+          "status": "pass",
+          "detail": "737,084.44 <= 4,074,932.38"
+        },
+        {
+          "check": "notice_date on or before due_date",
+          "status": "pass",
+          "detail": "2025-05-21 -> 2025-05-31"
+        }
+      ],
+      "triage": {
+        "status": "exception",
+        "reasons": [
+          "currency not found"
+        ]
+      }
+    },
+    {
+      "file": "Brookmont_IV_CapitalCall_03.pdf",
+      "doc_type": "capital_call",
+      "classification": {
+        "doc_type": "capital_call",
+        "confidence": 0.98,
+        "reason": "Document explicitly titled 'Capital Call Notice' and details a funding request from GP to LP with specific amounts and deadlines."
+      },
+      "fields": {
+        "fund_name": {
+          "value": "Brookmont Capital Partners IV, L.P.",
+          "confidence": 1.0,
+          "quote": "Brookmont Capital Partners IV, L.P."
+        },
+        "gp_manager": {
+          "value": "Brookmont Capital Management, LLC",
+          "confidence": 1.0,
+          "quote": "Brookmont Capital Management, LLC"
+        },
+        "notice_date": {
+          "value": "2025-11-09",
+          "confidence": 1.0,
+          "quote": "November 09, 2025"
+        },
+        "due_date": {
+          "value": "2025-11-23",
+          "confidence": 1.0,
+          "quote": "November 23, 2025"
+        },
+        "call_number": {
+          "value": 3,
+          "confidence": 1.0,
+          "quote": "Call No. 3"
+        },
+        "amount": {
+          "value": 499357.48,
+          "confidence": 1.0,
+          "quote": "$499,357.48"
+        },
+        "currency": {
+          "value": "USD",
+          "confidence": 0.8,
+          "quote": ""
+        },
+        "commitment": {
+          "value": 5000000.0,
+          "confidence": 1.0,
+          "quote": "$5,000,000.00"
+        },
+        "cumulative_called": {
+          "value": 2161509.54,
+          "confidence": 1.0,
+          "quote": "$2,161,509.54"
+        },
+        "unfunded_commitment": {
+          "value": 2838490.46,
+          "confidence": 1.0,
+          "quote": "$2,838,490.46"
+        },
+        "purpose_investments": {
+          "value": 472470.04,
+          "confidence": 1.0,
+          "quote": "$472,470.04"
+        },
+        "purpose_management_fee": {
+          "value": 23591.08,
+          "confidence": 1.0,
+          "quote": "$23,591.08"
+        },
+        "purpose_expenses": {
+          "value": 3296.36,
+          "confidence": 1.0,
+          "quote": "$3,296.36"
+        }
+      },
+      "checks": [
+        {
+          "check": "purpose components sum to call amount",
+          "status": "pass",
+          "detail": "ties at 499,357.48"
+        },
+        {
+          "check": "unfunded = commitment - cumulative called",
+          "status": "pass",
+          "detail": "ties at 2,838,490.46"
+        },
+        {
+          "check": "call amount does not exceed unfunded commitment",
+          "status": "pass",
+          "detail": "499,357.48 <= 3,337,847.94"
+        },
+        {
+          "check": "notice_date on or before due_date",
+          "status": "pass",
+          "detail": "2025-11-09 -> 2025-11-23"
+        }
+      ],
+      "triage": {
+        "status": "auto_posted",
+        "reasons": []
+      }
+    },
+    {
+      "file": "Brookmont_IV_Distribution_01.pdf",
+      "doc_type": "error",
+      "classification": {},
+      "fields": {},
+      "checks": [],
+      "triage": {
+        "status": "exception",
+        "reasons": [
+          "pipeline error: HTTP Error 429: Too Many Requests"
+        ]
+      }
+    },
+    {
+      "file": "Brookmont_IV_Distribution_02.pdf",
+      "doc_type": "error",
+      "classification": {},
+      "fields": {},
+      "checks": [],
+      "triage": {
+        "status": "exception",
+        "reasons": [
+          "pipeline error: HTTP Error 429: Too Many Requests"
+        ]
+      }
+    },
+    {
+      "file": "Halloway_RA_CapAcct_2025-12-31.pdf",
+      "doc_type": "error",
+      "classification": {},
+      "fields": {},
+      "checks": [],
+      "triage": {
+        "status": "exception",
+        "reasons": [
+          "pipeline error: HTTP Error 429: Too Many Requests"
+        ]
+      }
+    },
+    {
+      "file": "Halloway_RA_CapAcct_2026-03-31.pdf",
+      "doc_type": "error",
+      "classification": {},
+      "fields": {},
+      "checks": [],
+      "triage": {
+        "status": "exception",
+        "reasons": [
+          "pipeline error: HTTP Error 429: Too Many Requests"
+        ]
+      }
+    },
+    {
+      "file": "Halloway_RA_CapitalCall_01.pdf",
+      "doc_type": "error",
+      "classification": {},
+      "fields": {},
+      "checks": [],
+      "triage": {
+        "status": "exception",
+        "reasons": [
+          "pipeline error: HTTP Error 429: Too Many Requests"
+        ]
+      }
+    },
+    {
+      "file": "Halloway_RA_CapitalCall_02.pdf",
+      "doc_type": "error",
+      "classification": {},
+      "fields": {},
+      "checks": [],
+      "triage": {
+        "status": "exception",
+        "reasons": [
+          "pipeline error: HTTP Error 429: Too Many Requests"
+        ]
+      }
+    },
+    {
+      "file": "Halloway_RA_CapitalCall_03.pdf",
+      "doc_type": "error",
+      "classification": {},
+      "fields": {},
+      "checks": [],
+      "triage": {
+        "status": "exception",
+        "reasons": [
+          "pipeline error: HTTP Error 429: Too Many Requests"
+        ]
+      }
+    },
+    {
+      "file": "Halloway_RA_CapitalCall_04.pdf",
+      "doc_type": "error",
+      "classification": {},
+      "fields": {},
+      "checks": [],
+      "triage": {
+        "status": "exception",
+        "reasons": [
+          "pipeline error: HTTP Error 429: Too Many Requests"
+        ]
+      }
+    },
+    {
+      "file": "Halloway_RA_Distribution_01.pdf",
+      "doc_type": "error",
+      "classification": {},
+      "fields": {},
+      "checks": [],
+      "triage": {
+        "status": "exception",
+        "reasons": [
+          "pipeline error: HTTP Error 429: Too Many Requests"
+        ]
+      }
+    },
+    {
+      "file": "Halloway_RA_Distribution_02.pdf",
+      "doc_type": "error",
+      "classification": {},
+      "fields": {},
+      "checks": [],
+      "triage": {
+        "status": "exception",
+        "reasons": [
+          "pipeline error: HTTP Error 429: Too Many Requests"
+        ]
+      }
+    },
+    {
+      "file": "Kestrel_PC_II_CapAcct_2025-12-31.pdf",
+      "doc_type": "error",
+      "classification": {},
+      "fields": {},
+      "checks": [],
+      "triage": {
+        "status": "exception",
+        "reasons": [
+          "pipeline error: HTTP Error 429: Too Many Requests"
+        ]
+      }
+    },
+    {
+      "file": "Kestrel_PC_II_CapAcct_2026-03-31.pdf",
+      "doc_type": "error",
+      "classification": {},
+      "fields": {},
+      "checks": [],
+      "triage": {
+        "status": "exception",
+        "reasons": [
+          "pipeline error: HTTP Error 429: Too Many Requests"
+        ]
+      }
+    },
+    {
+      "file": "Kestrel_PC_II_CapitalCall_01.pdf",
+      "doc_type": "error",
+      "classification": {},
+      "fields": {},
+      "checks": [],
+      "triage": {
+        "status": "exception",
+        "reasons": [
+          "pipeline error: HTTP Error 429: Too Many Requests"
+        ]
+      }
+    },
+    {
+      "file": "Kestrel_PC_II_CapitalCall_02.pdf",
+      "doc_type": "error",
+      "classification": {},
+      "fields": {},
+      "checks": [],
+      "triage": {
+        "status": "exception",
+        "reasons": [
+          "pipeline error: HTTP Error 429: Too Many Requests"
+        ]
+      }
+    },
+    {
+      "file": "Kestrel_PC_II_CapitalCall_03.pdf",
+      "doc_type": "error",
+      "classification": {},
+      "fields": {},
+      "checks": [],
+      "triage": {
+        "status": "exception",
+        "reasons": [
+          "pipeline error: HTTP Error 429: Too Many Requests"
+        ]
+      }
+    },
+    {
+      "file": "Kestrel_PC_II_Distribution_01.pdf",
+      "doc_type": "error",
+      "classification": {},
+      "fields": {},
+      "checks": [],
+      "triage": {
+        "status": "exception",
+        "reasons": [
+          "pipeline error: HTTP Error 429: Too Many Requests"
+        ]
+      }
+    },
+    {
+      "file": "Northgate_II_CapAcct_2025-12-31.pdf",
+      "doc_type": "error",
+      "classification": {},
+      "fields": {},
+      "checks": [],
+      "triage": {
+        "status": "exception",
+        "reasons": [
+          "pipeline error: HTTP Error 429: Too Many Requests"
+        ]
+      }
+    },
+    {
+      "file": "Northgate_II_CapAcct_2026-03-31.pdf",
+      "doc_type": "error",
+      "classification": {},
+      "fields": {},
+      "checks": [],
+      "triage": {
+        "status": "exception",
+        "reasons": [
+          "pipeline error: HTTP Error 429: Too Many Requests"
+        ]
+      }
+    },
+    {
+      "file": "Northgate_II_CapitalCall_01.pdf",
+      "doc_type": "error",
+      "classification": {},
+      "fields": {},
+      "checks": [],
+      "triage": {
+        "status": "exception",
+        "reasons": [
+          "pipeline error: HTTP Error 429: Too Many Requests"
+        ]
+      }
+    },
+    {
+      "file": "Northgate_II_CapitalCall_02.pdf",
+      "doc_type": "error",
+      "classification": {},
+      "fields": {},
+      "checks": [],
+      "triage": {
+        "status": "exception",
+        "reasons": [
+          "pipeline error: HTTP Error 429: Too Many Requests"
+        ]
+      }
+    },
+    {
+      "file": "Northgate_II_CapitalCall_03.pdf",
+      "doc_type": "error",
+      "classification": {},
+      "fields": {},
+      "checks": [],
+      "triage": {
+        "status": "exception",
+        "reasons": [
+          "pipeline error: HTTP Error 429: Too Many Requests"
+        ]
+      }
+    },
+    {
+      "file": "Northgate_II_CapitalCall_04.pdf",
+      "doc_type": "error",
+      "classification": {},
+      "fields": {},
+      "checks": [],
+      "triage": {
+        "status": "exception",
+        "reasons": [
+          "pipeline error: HTTP Error 429: Too Many Requests"
+        ]
+      }
+    },
+    {
+      "file": "Northgate_II_Distribution_01.pdf",
+      "doc_type": "error",
+      "classification": {},
+      "fields": {},
+      "checks": [],
+      "triage": {
+        "status": "exception",
+        "reasons": [
+          "pipeline error: HTTP Error 429: Too Many Requests"
+        ]
+      }
+    },
+    {
+      "file": "Sable_Opp_I_CapAcct_2025-12-31.pdf",
+      "doc_type": "error",
+      "classification": {},
+      "fields": {},
+      "checks": [],
+      "triage": {
+        "status": "exception",
+        "reasons": [
+          "pipeline error: HTTP Error 429: Too Many Requests"
+        ]
+      }
+    },
+    {
+      "file": "Sable_Opp_I_CapAcct_2026-03-31.pdf",
+      "doc_type": "error",
+      "classification": {},
+      "fields": {},
+      "checks": [],
+      "triage": {
+        "status": "exception",
+        "reasons": [
+          "pipeline error: HTTP Error 429: Too Many Requests"
+        ]
+      }
+    },
+    {
+      "file": "Sable_Opp_I_CapitalCall_01.pdf",
+      "doc_type": "error",
+      "classification": {},
+      "fields": {},
+      "checks": [],
+      "triage": {
+        "status": "exception",
+        "reasons": [
+          "pipeline error: HTTP Error 429: Too Many Requests"
+        ]
+      }
+    },
+    {
+      "file": "Sable_Opp_I_CapitalCall_02.pdf",
+      "doc_type": "error",
+      "classification": {},
+      "fields": {},
+      "checks": [],
+      "triage": {
+        "status": "exception",
+        "reasons": [
+          "pipeline error: HTTP Error 429: Too Many Requests"
+        ]
+      }
+    },
+    {
+      "file": "Sable_Opp_I_CapitalCall_03.pdf",
+      "doc_type": "error",
+      "classification": {},
+      "fields": {},
+      "checks": [],
+      "triage": {
+        "status": "exception",
+        "reasons": [
+          "pipeline error: HTTP Error 429: Too Many Requests"
+        ]
+      }
+    },
+    {
+      "file": "Sable_Opp_I_CapitalCall_04.pdf",
+      "doc_type": "error",
+      "classification": {},
+      "fields": {},
+      "checks": [],
+      "triage": {
+        "status": "exception",
+        "reasons": [
+          "pipeline error: HTTP Error 429: Too Many Requests"
+        ]
+      }
+    },
+    {
+      "file": "Sable_Opp_I_Distribution_01.pdf",
+      "doc_type": "error",
+      "classification": {},
+      "fields": {},
+      "checks": [],
+      "triage": {
+        "status": "exception",
+        "reasons": [
+          "pipeline error: HTTP Error 429: Too Many Requests"
+        ]
+      }
+    },
+    {
+      "file": "Sable_Opp_I_Distribution_02.pdf",
+      "doc_type": "error",
+      "classification": {},
+      "fields": {},
+      "checks": [],
+      "triage": {
+        "status": "exception",
+        "reasons": [
+          "pipeline error: HTTP Error 429: Too Many Requests"
+        ]
+      }
+    }
+  ],
+  "reconciliation": {
+    "positions": [
+      {
+        "fund": "Brookmont Capital Partners IV, L.P.",
+        "manager": "Brookmont Capital Management, LLC",
+        "currency": "USD",
+        "commitment": 5000000.0,
+        "called": 2161509.54,
+        "distributed": 0.0,
+        "latest_nav": 2141640.49,
+        "nav_date": "2026-03-31",
+        "calls": [
+          {
+            "amount": 925067.62,
+            "due": "2026-07-10",
+            "file": "Brookmont_IV_CapitalCall_01.pdf",
+            "status": "auto_posted"
+          },
+          {
+            "amount": 737084.44,
+            "due": "2025-05-31",
+            "file": "Brookmont_IV_CapitalCall_02.pdf",
+            "status": "exception"
+          },
+          {
+            "amount": 499357.48,
+            "due": "2025-11-23",
+            "file": "Brookmont_IV_CapitalCall_03.pdf",
+            "status": "auto_posted"
+          }
+        ],
+        "distributions": [],
+        "breaks": [],
+        "unfunded": 2838490.46,
+        "pct_called": 43.2,
+        "dpi": 0.0
+      },
+      {
+        "fund": "Ardent Growth Fund III LP",
+        "manager": "Ardent Partners LLP",
+        "currency": "USD",
+        "commitment": 3000000.0,
+        "called": 1656434.55,
+        "distributed": 241899.38,
+        "latest_nav": 1652149.02,
+        "nav_date": "2026-03-31",
+        "calls": [
+          {
+            "amount": 481503.38,
+            "due": "2025-05-24",
+            "file": "Ardent_III_CapitalCall_01.pdf",
+            "status": "auto_posted"
+          },
+          {
+            "amount": 467671.39,
+            "due": "2026-05-11",
+            "file": "Ardent_III_CapitalCall_02.pdf",
+            "status": "auto_posted"
+          },
+          {
+            "amount": 351852.59,
+            "due": "2026-06-22",
+            "file": "Ardent_III_CapitalCall_03.pdf",
+            "status": "auto_posted"
+          },
+          {
+            "amount": 355407.19,
+            "due": "2026-08-03",
+            "file": "Ardent_III_CapitalCall_04.pdf",
+            "status": "auto_posted"
+          }
+        ],
+        "distributions": [
+          {
+            "amount": 241899.38,
+            "date": "2025-11-10",
+            "file": "Ardent_III_Distribution_01.pdf"
+          }
+        ],
+        "breaks": [],
+        "unfunded": 1343565.45,
+        "pct_called": 55.2,
+        "dpi": 0.15
+      }
+    ],
+    "calendar": [
+      {
+        "fund": "Ardent Growth Fund III LP",
+        "currency": "USD",
+        "amount": 355407.19,
+        "due": "2026-08-03",
+        "days": 7,
+        "file": "Ardent_III_CapitalCall_04.pdf",
+        "status": "auto_posted"
+      }
+    ]
+  },
+  "summary": {
+    "documents": 43,
+    "auto_posted": 10,
+    "exceptions": 33,
+    "straight_through_rate": 23.3,
+    "checks_run": 35,
+    "checks_failed": 0,
+    "positions": 2,
+    "funds_with_breaks": 0,
+    "upcoming_calls": 1,
+    "cash_due_30d": 355407.19,
+    "model": "nvidia/nemotron-nano-9b-v2:free",
+    "live_llm": true
+  }
+}
