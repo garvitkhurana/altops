@@ -15,8 +15,8 @@ without being requested, the system acts on it, and a human sees only what broke
 That is the distinction from a copilot you open and query, and it is what "agentic"
 has to mean here to be worth saying.
 
-Private credit facilities are the first surface. The rest of the map is in
-`yc/THE_STORY.md`.
+Private credit facilities are the first surface. Run instructions:
+[`docs/RUNNING.md`](docs/RUNNING.md).
 
 ---
 
@@ -37,21 +37,17 @@ staff. The agent's number becomes the truth even when it's wrong.
 ## Run it
 
 ```bash
-pip install fastapi uvicorn pypdf reportlab
+pip install fastapi uvicorn pypdf reportlab openai python-dotenv
 
 python3 credit_corpus.py     # build the agreement + notice traffic
-python3 app.py               # -> http://localhost:8000
+python3 app.py               # → http://localhost:8000
 ```
 
 Provider keys go in `.env` — auto-detect order is `NVIDIA_API_KEY`, then
 `OPENROUTER_API_KEY`, then `ANTHROPIC_API_KEY`. Without one, the deterministic
 parser runs alone and the demo still works.
 
-CLI, no server:
-
-```bash
-python3 facility.py
-```
+CLI, no server: `python3 facility.py`. More detail in [`docs/RUNNING.md`](docs/RUNNING.md).
 
 ## The architecture, which is the whole argument
 
