@@ -37,6 +37,10 @@ app = FastAPI(title="Altline")
 _cache = {}
 
 
+def _public_site():
+    return os.environ.get("ALTLINE_PUBLIC", "").lower() in ("1", "true", "yes")
+
+
 def run(refresh=False, provider=None, agreement=None):
     key = (provider or "auto", agreement or "default")
     if refresh or key not in _cache:
@@ -51,9 +55,14 @@ def run(refresh=False, provider=None, agreement=None):
 @app.get("/api/options")
 def api_options():
     facilities = facility.list_facilities()
-    providers = pipeline.available_providers()
-    default_provider = pipeline._provider() or "deterministic"
+    if _public_site():
+        providers = [{"id": "deterministic", "label": "Sample audit", "model": None}]
+        default_provider = "deterministic"
+    else:
+        providers = pipeline.available_providers()
+        default_provider = pipeline._provider() or "deterministic"
     return JSONResponse({
+        "public": _public_site(),
         "facilities": facilities,
         "providers": providers,
         "default_facility": facilities[0]["id"] if facilities else None,
@@ -64,6 +73,8 @@ def api_options():
 @app.get("/api/run")
 async def api_run(refresh: bool = False, provider: str = None, facility_id: str = None):
     import asyncio
+    if _public_site():
+        provider = "deterministic"
     try:
         data = await asyncio.to_thread(run, refresh, provider, facility_id)
         return JSONResponse(json.loads(json.dumps(data, default=str)))
@@ -84,7 +95,8 @@ def index():
 
 @app.get("/demo", response_class=HTMLResponse)
 def demo():
-    return HTML
+    flag = "true" if _public_site() else "false"
+    return HTML.replace("__PUBLIC_DEMO__", flag)
 
 
 LANDING_HTML = r"""
@@ -313,6 +325,7 @@ h2{font-family:Fraunces,Georgia,serif;font-size:26px;font-weight:650;
 </header>
 <main id="app"><div class="loading">Compiling agreement&hellip;</div></main>
 <script>
+const PUBLIC = __PUBLIC_DEMO__;
 const esc=s=>String(s==null?'':s).replace(/[<>&]/g,c=>({'<':'&lt;','>':'&gt;','&':'&amp;'}[c]));
 const m2=n=>n==null?'&mdash;':'$'+Number(n).toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2});
 const m0=n=>n==null?'&mdash;':'$'+Number(n).toLocaleString('en-US',{maximumFractionDigits:0});
@@ -320,8 +333,10 @@ const m0=n=>n==null?'&mdash;':'$'+Number(n).toLocaleString('en-US',{maximumFract
 const facilitySel=document.getElementById('facility');
 const providerSel=document.getElementById('provider');
 const runBtn=document.getElementById('runBtn');
+if(PUBLIC) document.querySelector('.controls').style.display='none';
 
 function setBusy(b,label){
+  if(PUBLIC) return;
   runBtn.disabled=b; facilitySel.disabled=b; providerSel.disabled=b;
   runBtn.textContent=b?(label||'Running\u2026'):'Run with model';
 }
@@ -373,7 +388,9 @@ function render(d){
   const gt=X.gt||{}, det=s.detection||{};
   const el=document.getElementById('mode');
   el.className='mode';
-  if(X.mode==='llm+deterministic'){
+  if(PUBLIC){
+    el.textContent='sample audit';
+  }else if(X.mode==='llm+deterministic'){
     el.textContent='live · '+(X.provider||'model')+' + engine';
     el.className='mode live';
   }else if(X.attempted && X.attempted!=='deterministic'){
@@ -562,17 +579,19 @@ function card(f){
   return h+'</div>';
 }
 
-runBtn.addEventListener('click',()=>{
-  // If dropdown is still deterministic, pick first live provider.
-  let p=providerSel.value;
-  if(p==='deterministic'){
-    const live=[...providerSel.options].map(o=>o.value)
-      .find(v=>v!=='deterministic');
-    if(live){ providerSel.value=live; p=live; }
-  }
-  run(true,p);
-});
-facilitySel.addEventListener('change',()=>run(true,'deterministic'));
+if(!PUBLIC){
+  runBtn.addEventListener('click',()=>{
+    // If dropdown is still deterministic, pick first live provider.
+    let p=providerSel.value;
+    if(p==='deterministic'){
+      const live=[...providerSel.options].map(o=>o.value)
+        .find(v=>v!=='deterministic');
+      if(live){ providerSel.value=live; p=live; }
+    }
+    run(true,p);
+  });
+  facilitySel.addEventListener('change',()=>run(true,'deterministic'));
+}
 
 loadOptions().then(()=>run(false,'deterministic')).catch(e=>{
   document.getElementById('app').innerHTML=

@@ -15,10 +15,7 @@ Ensure the latest code is on GitHub (`garvitkhurana/altops` or your fork).
    - **Start command:** `uvicorn app:app --host 0.0.0.0 --port $PORT`
    - **Instance type:** Free (spins down after ~15 min idle; first request may take ~30s).
 
-4. Under **Environment**, add any keys you want for live LLM runs (optional — deterministic demo works without them):
-   - `NVIDIA_API_KEY`
-   - `OPENROUTER_API_KEY`
-   - `ANTHROPIC_API_KEY`
+4. Set **`ALTLINE_PUBLIC=1`** in Environment (included in `render.yaml`). This serves a read-only sample audit at `/demo` — no LLM runs, no provider controls. Omit it locally to keep the full interactive demo.
 
 5. Deploy and wait until the service is **Live**. Note the default URL, e.g. `https://altine.onrender.com`.
 
@@ -64,5 +61,5 @@ dig www.altine.co CNAME +short
 ## Notes
 
 - **Free tier cold starts:** first visit after idle can be slow. Upgrade to a paid instance for always-on demos.
-- **Demo without API keys:** the site works on the deterministic parser; "Run with model" needs env vars on Render.
+- **Public site:** with `ALTLINE_PUBLIC=1`, visitors see a fixed sample audit only. Live model runs stay on your machine.
 - **LP demo:** `app_alts_lp.py` is not deployed by default; only `app.py` is the production entrypoint.
