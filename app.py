@@ -109,15 +109,15 @@ LANDING_HTML = r"""
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
 <style>
 :root{--ink:#15221e;--muted:#66736d;--line:#d7dfd9;--paper:#f5f7f2;--panel:#fbfcf9;--mint:#dbece1;--green:#147a54;--orange:#cc5b2d}
-*{box-sizing:border-box;margin:0;padding:0}body{background:var(--paper);color:var(--ink);font:15px/1.55 "DM Sans",sans-serif}
-a{color:inherit;text-decoration:none}.wrap{max-width:1160px;margin:0 auto;padding:0 28px}
-header{height:76px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line)}
+*{box-sizing:border-box;margin:0;padding:0}body{background:var(--paper);color:var(--ink);font:15px/1.55 "DM Sans",sans-serif;overflow-x:hidden}
+a{color:inherit;text-decoration:none}.wrap{max-width:1160px;margin:0 auto;padding:0 clamp(24px,5vw,40px)}
+header{min-height:76px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line);padding:16px 0}
 .brand,.brand:visited{display:inline-block;color:var(--ink);text-decoration:none;font:700 24px/1 "Space Grotesk",sans-serif;letter-spacing:-1px}.brand span{color:var(--green)}
 nav{display:flex;align-items:center;gap:28px;color:var(--muted);font-size:13px}nav a:hover{color:var(--ink)}
 .nav-cta{background:var(--ink);color:#fff;padding:10px 16px;border-radius:5px;font-weight:600}
 .hero{display:grid;grid-template-columns:minmax(0,1fr) 390px;gap:84px;padding:96px 0 82px;align-items:center}
 .kicker{color:var(--green);font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;margin-bottom:18px}
-h1{font:600 clamp(50px,7vw,84px)/.96 "Space Grotesk",sans-serif;letter-spacing:-4px;max-width:700px}
+h1{font:600 clamp(40px,7vw,84px)/.96 "Space Grotesk",sans-serif;letter-spacing:clamp(-2px,-0.035em,-4px);max-width:700px}
 .hero-copy{color:var(--muted);font-size:18px;max-width:550px;margin-top:25px}.actions{display:flex;gap:12px;margin-top:30px;align-items:center}
 .primary{background:var(--green);color:#fff;padding:13px 19px;border-radius:5px;font-weight:700}.secondary{padding:12px 2px;color:var(--muted);font-weight:600}
 .window{background:var(--panel);border:1px solid var(--line);box-shadow:15px 18px 0 var(--mint);padding:19px;border-radius:7px;transform:rotate(1.5deg)}
@@ -129,7 +129,8 @@ h1{font:600 clamp(50px,7vw,84px)/.96 "Space Grotesk",sans-serif;letter-spacing:-
 .proof{background:var(--ink);color:#f3f7f2;padding:78px 0}.proof-grid{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}.proof h2{font:600 42px/.98 "Space Grotesk",sans-serif;letter-spacing:-2px}.proof p{color:#a9b8af;margin-top:18px;max-width:430px}.proof-stat{border-left:1px solid #405148;padding-left:30px}.stat{font:600 55px/1 "Space Grotesk",sans-serif;color:#d9f0df;letter-spacing:-3px}.stat-label{color:#a9b8af;font-size:13px;margin-top:8px}.proof-stat hr{border:none;border-top:1px solid #405148;margin:25px 0}.small-stat{display:flex;justify-content:space-between;color:#d9f0df;font-size:14px}.small-stat span{color:#a9b8af}
 .closing{padding:92px 0 105px;text-align:center}.closing h2{font:600 49px/.98 "Space Grotesk",sans-serif;letter-spacing:-2px}.closing p{color:var(--muted);margin:17px auto 28px;max-width:450px}
 footer{border-top:1px solid var(--line);padding:23px 0;color:var(--muted);font-size:12px;display:flex;justify-content:space-between}
-@media(max-width:800px){nav a:not(.nav-cta){display:none}.hero{grid-template-columns:1fr;gap:55px;padding:70px 0}.window{max-width:420px}.section-head,.proof-grid{grid-template-columns:1fr;gap:24px}.features{grid-template-columns:1fr}.feature{min-height:0}.proof-stat{border-left:0;border-top:1px solid #405148;padding:25px 0 0}.closing h2{font-size:40px}}
+@media(max-width:800px){nav a:not(.nav-cta){display:none}.hero{grid-template-columns:1fr;gap:40px;padding:56px 0 48px}.window{max-width:100%}.section-head,.proof-grid{grid-template-columns:1fr;gap:24px}.section{padding:64px 0}.features{grid-template-columns:1fr}.feature{min-height:0}.proof{padding:56px 0}.proof-stat{border-left:0;border-top:1px solid #405148;padding:25px 0 0}.closing{padding:64px 0 80px}.closing h2{font-size:clamp(32px,8vw,40px)}footer{flex-direction:column;gap:8px;text-align:center}}
+@media(max-width:480px){.wrap{padding:0 20px}h1{letter-spacing:-1.5px}.actions{flex-direction:column;align-items:flex-start}}
 </style></head><body>
 <header class="wrap"><a class="brand" href="/">alt<span>line</span></a><nav><a href="#product">Product</a><a href="#proof">Why Altline</a><a class="nav-cta" href="/demo">See the demo</a></nav></header>
 <main>
@@ -167,12 +168,13 @@ body{
   color:var(--ink);
   font:15px/1.55 "IBM Plex Sans",system-ui,sans-serif;
   min-height:100vh;
+  overflow-x:hidden;
 }
 .mono{font-family:"IBM Plex Mono",ui-monospace,monospace;font-variant-numeric:tabular-nums}
 .display{font-family:Fraunces,Georgia,serif}
 
 header{
-  padding:15px 28px;display:flex;align-items:center;gap:28px;flex-wrap:wrap;
+  padding:15px clamp(24px,5vw,40px);display:flex;align-items:center;gap:28px;flex-wrap:wrap;
   border-bottom:1px solid var(--line);background:rgba(255,252,247,.72);
   backdrop-filter:blur(8px);position:sticky;top:0;z-index:5;
 }
@@ -214,7 +216,7 @@ header{
   color:var(--muted);background:var(--panel)}
 .mode.live{color:var(--green);border-color:#b7d7c4;background:#eef7f1}
 
-main{max-width:980px;padding:0 28px 72px;margin:0 auto}
+main{max-width:980px;padding:0 clamp(24px,5vw,40px) 72px;margin:0 auto}
 
 .hero{padding:48px 0 36px;animation:rise .7s ease both}
 .hero-grid{display:grid;grid-template-columns:minmax(0,1fr) 270px;gap:42px;align-items:end}
@@ -297,7 +299,8 @@ h2{font-family:Fraunces,Georgia,serif;font-size:26px;font-weight:650;
   .hero-grid{grid-template-columns:1fr;gap:25px}
   .hero-panel{border-left:none;border-top:1px solid var(--line);padding:17px 0 0}
   .nav{order:3;width:100%;border-top:1px solid var(--line);padding-top:10px}
-  header{align-items:flex-start}
+  header{align-items:flex-start;padding:15px 20px}
+  main{padding:0 20px 72px}
   .controls{margin-left:0;width:100%}
 }
 </style></head><body>
