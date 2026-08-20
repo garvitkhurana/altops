@@ -128,8 +128,10 @@ h1{font:600 clamp(40px,7vw,84px)/.96 "Space Grotesk",sans-serif;letter-spacing:c
 .features{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}.feature{background:var(--panel);padding:25px;min-height:220px}.number{color:var(--orange);font:600 13px "Space Grotesk",sans-serif}.feature h3{font:600 21px "Space Grotesk",sans-serif;margin:48px 0 8px}.feature p{color:var(--muted);font-size:13px;max-width:280px}
 .proof{background:var(--ink);color:#f3f7f2;padding-block:78px}.proof-grid{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}.proof h2{font:600 42px/.98 "Space Grotesk",sans-serif;letter-spacing:-2px}.proof p{color:#a9b8af;margin-top:18px;max-width:430px}.proof-stat{border-left:1px solid #405148;padding-left:30px}.stat{font:600 55px/1 "Space Grotesk",sans-serif;color:#d9f0df;letter-spacing:-3px}.stat-label{color:#a9b8af;font-size:13px;margin-top:8px}.proof-stat hr{border:none;border-top:1px solid #405148;margin:25px 0}.small-stat{display:flex;justify-content:space-between;color:#d9f0df;font-size:14px}.small-stat span{color:#a9b8af}
 .closing{padding-block:92px 105px;text-align:center}.closing h2{font:600 49px/.98 "Space Grotesk",sans-serif;letter-spacing:-2px}.closing p{color:var(--muted);margin:17px auto 28px;max-width:450px}
-footer.wrap{padding-block:23px;color:var(--muted);font-size:12px;display:flex;justify-content:space-between;border-top:1px solid var(--line)}
-@media(max-width:800px){nav a:not(.nav-cta){display:none}.hero{grid-template-columns:1fr;gap:40px;padding-block:56px 48px}.window{max-width:100%}.section-head,.proof-grid{grid-template-columns:1fr;gap:24px}.section{padding-block:64px}.features{grid-template-columns:1fr}.feature{min-height:0}.proof{padding-block:56px}.proof-stat{border-left:0;border-top:1px solid #405148;padding:25px 0 0}.closing{padding-block:64px 80px}.closing h2{font-size:clamp(32px,8vw,40px)}footer{flex-direction:column;gap:8px;text-align:center}}
+footer.wrap{padding-block:28px;color:var(--muted);font-size:12px;display:flex;justify-content:space-between;align-items:flex-end;gap:24px;border-top:1px solid var(--line);flex-wrap:wrap}
+footer a{color:var(--ink);font-weight:600}footer a:hover{color:var(--green)}
+.foot-meta{display:flex;flex-direction:column;gap:4px}.foot-copy{text-align:right}
+@media(max-width:800px){nav a:not(.nav-cta){display:none}.hero{grid-template-columns:1fr;gap:40px;padding-block:56px 48px}.window{max-width:100%}.section-head,.proof-grid{grid-template-columns:1fr;gap:24px}.section{padding-block:64px}.features{grid-template-columns:1fr}.feature{min-height:0}.proof{padding-block:56px}.proof-stat{border-left:0;border-top:1px solid #405148;padding:25px 0 0}.closing{padding-block:64px 80px}.closing h2{font-size:clamp(32px,8vw,40px)}footer.wrap{flex-direction:column;align-items:flex-start;gap:14px}.foot-copy{text-align:left}}
 @media(max-width:480px){.wrap{padding-inline:20px}h1{letter-spacing:-1.5px}.actions{flex-direction:column;align-items:flex-start}}
 </style></head><body>
 <header class="wrap"><a class="brand" href="/">alt<span>line</span></a><nav><a href="#product">Product</a><a href="#proof">Why Altline</a><a class="nav-cta" href="/demo">See the demo</a></nav></header>
@@ -140,7 +142,7 @@ footer.wrap{padding-block:23px;color:var(--muted);font-size:12px;display:flex;ju
   <section class="wrap section" id="product"><div class="section-head"><h2>Quiet software for expensive mistakes.</h2><p class="section-intro">The work arrives as PDFs. The answer is buried in negotiated language. Altline turns that language into a checkable control for every notice that follows.</p></div><div class="features"><article class="feature"><div class="number">01 / COMPILE</div><h3>Agreement into a specification</h3><p>Key terms become structured, cited rules: margins, day counts, notice periods, availability and more.</p></article><article class="feature"><div class="number">02 / VERIFY</div><h3>Every number recomputed</h3><p>Deterministic checks independently recalculate interest and test each request against the contract.</p></article><article class="feature"><div class="number">03 / PROVE</div><h3>Exceptions with evidence</h3><p>See the broken clause, the agent's figure, the corrected arithmetic and the precise action to take.</p></article></div></section>
   <section class="proof" id="proof"><div class="wrap proof-grid"><div><div class="kicker">One facility. One test corpus.</div><h2>Make “your agent is wrong” an evidence trail.</h2><p>Altline is designed for the work nobody has time to repeat by hand, but everybody pays for when it goes wrong.</p></div><div class="proof-stat"><div class="stat">$5.4k</div><div class="stat-label">mispricing found in the demo facility</div><hr><div class="small-stat"><span>Seeded defects caught</span><b>7 / 7</b></div><div class="small-stat"><span>Availability breach found</span><b>$1.5m</b></div></div></div></section>
   <section class="wrap closing"><h2>Start with the notices you already receive.</h2><p>Bring six months of agent traffic. We will show you what the agreement says, what the notice says, and what the difference is worth.</p><a class="primary" href="/demo">Open the product demo</a></section>
-</main><footer class="wrap"><span>altline / private credit verification</span><span>Confidential by design</span></footer>
+</main><footer class="wrap"><div class="foot-meta"><span>altline / private credit verification</span><span>Garvit Khurana</span><a href="mailto:garvit@altline.co">garvit@altline.co</a></div><div class="foot-copy">&copy; 2026 Altline. All rights reserved.</div></footer>
 </body></html>
 """
 
@@ -290,6 +292,12 @@ h2{font-family:Fraunces,Georgia,serif;font-size:26px;font-weight:650;
 
 .honest{margin-top:48px;padding:18px 0;border-top:1px solid var(--line);
   color:var(--muted);font-size:13px;max-width:40em}
+.site-foot{margin:0 auto;max-width:980px;padding:22px clamp(24px,5vw,40px) 28px;
+  color:var(--muted);font-size:12px;display:flex;justify-content:space-between;
+  align-items:flex-end;gap:20px;flex-wrap:wrap;border-top:1px solid var(--line)}
+.site-foot a{color:var(--ink);font-weight:600;text-decoration:none}
+.site-foot a:hover{color:var(--green)}
+.site-foot .meta{display:flex;flex-direction:column;gap:4px}
 .loading{padding:80px 0;text-align:center;color:var(--muted)}
 .warn{background:#f5efd8;border:1px solid #e2d4a0;color:#6a5410;
   padding:12px 14px;border-radius:8px;font-size:13px;margin:16px 0}
@@ -301,6 +309,7 @@ h2{font-family:Fraunces,Georgia,serif;font-size:26px;font-weight:650;
   .nav{order:3;width:100%;border-top:1px solid var(--line);padding-top:10px}
   header{align-items:flex-start;padding:15px 20px}
   main{padding:0 20px 72px}
+  .site-foot{padding-inline:20px}
   .controls{margin-left:0;width:100%}
 }
 </style></head><body>
@@ -327,6 +336,13 @@ h2{font-family:Fraunces,Georgia,serif;font-size:26px;font-weight:650;
   </div>
 </header>
 <main id="app"><div class="loading">Compiling agreement&hellip;</div></main>
+<footer class="site-foot">
+  <div class="meta">
+    <span>Garvit Khurana</span>
+    <a href="mailto:garvit@altline.co">garvit@altline.co</a>
+  </div>
+  <div>&copy; 2026 Altline. All rights reserved.</div>
+</footer>
 <script>
 const PUBLIC = __PUBLIC_DEMO__;
 const esc=s=>String(s==null?'':s).replace(/[<>&]/g,c=>({'<':'&lt;','>':'&gt;','&':'&amp;'}[c]));
