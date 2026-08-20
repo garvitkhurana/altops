@@ -79,16 +79,67 @@ async def api_run(refresh: bool = False, provider: str = None, facility_id: str 
 
 @app.get("/", response_class=HTMLResponse)
 def index():
+    return LANDING_HTML
+
+
+@app.get("/demo", response_class=HTMLResponse)
+def demo():
     return HTML
+
+
+LANDING_HTML = r"""
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Altline | Verify private credit</title>
+<link rel="icon" href="data:,">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#15221e;--muted:#66736d;--line:#d7dfd9;--paper:#f5f7f2;--panel:#fbfcf9;--mint:#dbece1;--green:#147a54;--orange:#cc5b2d}
+*{box-sizing:border-box;margin:0;padding:0}body{background:var(--paper);color:var(--ink);font:15px/1.55 "DM Sans",sans-serif}
+a{color:inherit;text-decoration:none}.wrap{max-width:1160px;margin:0 auto;padding:0 28px}
+header{height:76px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line)}
+.brand,.brand:visited{display:inline-block;color:var(--ink);text-decoration:none;font:700 24px/1 "Space Grotesk",sans-serif;letter-spacing:-1px}.brand span{color:var(--green)}
+nav{display:flex;align-items:center;gap:28px;color:var(--muted);font-size:13px}nav a:hover{color:var(--ink)}
+.nav-cta{background:var(--ink);color:#fff;padding:10px 16px;border-radius:5px;font-weight:600}
+.hero{display:grid;grid-template-columns:minmax(0,1fr) 390px;gap:84px;padding:96px 0 82px;align-items:center}
+.kicker{color:var(--green);font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;margin-bottom:18px}
+h1{font:600 clamp(50px,7vw,84px)/.96 "Space Grotesk",sans-serif;letter-spacing:-4px;max-width:700px}
+.hero-copy{color:var(--muted);font-size:18px;max-width:550px;margin-top:25px}.actions{display:flex;gap:12px;margin-top:30px;align-items:center}
+.primary{background:var(--green);color:#fff;padding:13px 19px;border-radius:5px;font-weight:700}.secondary{padding:12px 2px;color:var(--muted);font-weight:600}
+.window{background:var(--panel);border:1px solid var(--line);box-shadow:15px 18px 0 var(--mint);padding:19px;border-radius:7px;transform:rotate(1.5deg)}
+.window-top{display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--line);padding-bottom:15px;font-size:12px}.dots{display:flex;gap:5px}.dots i{width:7px;height:7px;border-radius:50%;background:#c7d2ca}.live{color:var(--green);font-size:11px;font-weight:700}
+.window-title{font:600 25px/1.05 "Space Grotesk",sans-serif;margin:21px 0 18px}.impact{font:600 37px/1 "Space Grotesk",sans-serif;color:var(--orange);letter-spacing:-2px}.impact-label{font-size:12px;color:var(--muted);margin-top:5px}.metric-row{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:23px}.metric{border-top:1px solid var(--line);padding-top:10px}.metric b{font:600 21px "Space Grotesk",sans-serif}.metric small{display:block;color:var(--muted);font-size:11px;margin-top:2px}
+.band{border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:19px 0;color:var(--muted);font-size:13px}.band strong{color:var(--ink);font-weight:600;margin-right:34px}
+.section{padding:92px 0}.section-head{display:grid;grid-template-columns:1fr 1fr;gap:70px;margin-bottom:42px}.section h2{font:600 42px/.98 "Space Grotesk",sans-serif;letter-spacing:-2px}.section-intro{color:var(--muted);max-width:390px;font-size:16px}
+.features{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}.feature{background:var(--panel);padding:25px;min-height:220px}.number{color:var(--orange);font:600 13px "Space Grotesk",sans-serif}.feature h3{font:600 21px "Space Grotesk",sans-serif;margin:48px 0 8px}.feature p{color:var(--muted);font-size:13px;max-width:280px}
+.proof{background:var(--ink);color:#f3f7f2;padding:78px 0}.proof-grid{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}.proof h2{font:600 42px/.98 "Space Grotesk",sans-serif;letter-spacing:-2px}.proof p{color:#a9b8af;margin-top:18px;max-width:430px}.proof-stat{border-left:1px solid #405148;padding-left:30px}.stat{font:600 55px/1 "Space Grotesk",sans-serif;color:#d9f0df;letter-spacing:-3px}.stat-label{color:#a9b8af;font-size:13px;margin-top:8px}.proof-stat hr{border:none;border-top:1px solid #405148;margin:25px 0}.small-stat{display:flex;justify-content:space-between;color:#d9f0df;font-size:14px}.small-stat span{color:#a9b8af}
+.closing{padding:92px 0 105px;text-align:center}.closing h2{font:600 49px/.98 "Space Grotesk",sans-serif;letter-spacing:-2px}.closing p{color:var(--muted);margin:17px auto 28px;max-width:450px}
+footer{border-top:1px solid var(--line);padding:23px 0;color:var(--muted);font-size:12px;display:flex;justify-content:space-between}
+@media(max-width:800px){nav a:not(.nav-cta){display:none}.hero{grid-template-columns:1fr;gap:55px;padding:70px 0}.window{max-width:420px}.section-head,.proof-grid{grid-template-columns:1fr;gap:24px}.features{grid-template-columns:1fr}.feature{min-height:0}.proof-stat{border-left:0;border-top:1px solid #405148;padding:25px 0 0}.closing h2{font-size:40px}}
+</style></head><body>
+<header class="wrap"><a class="brand" href="/">alt<span>line</span></a><nav><a href="#product">Product</a><a href="#proof">Why Altline</a><a class="nav-cta" href="/demo">See the demo</a></nav></header>
+<main>
+  <section class="wrap hero"><div><div class="kicker">Verification infrastructure for alternative assets</div><h1>The number on the notice is not the truth.</h1><p class="hero-copy">Altline independently checks private credit agent notices against the agreement that governs them, before a wrong number becomes a booked number.</p><div class="actions"><a class="primary" href="/demo">See a live audit</a><a class="secondary" href="#product">Explore the product &rarr;</a></div></div>
+  <div class="window"><div class="window-top"><div class="dots"><i></i><i></i><i></i></div><div class="live">● AUDIT COMPLETE</div></div><div class="window-title">Meridian Packaging</div><div class="impact">$5,453.47</div><div class="impact-label">interest impact found in one period</div><div class="metric-row"><div class="metric"><b>10</b><small>findings surfaced</small></div><div class="metric"><b>3 / 4</b><small>notices challenged</small></div></div></div></section>
+  <div class="band"><div class="wrap"><strong>BUILT FOR THE BACK OFFICE</strong> Agreements &nbsp;·&nbsp; Borrowing notices &nbsp;·&nbsp; Agent calculations &nbsp;·&nbsp; Audit evidence</div></div>
+  <section class="wrap section" id="product"><div class="section-head"><h2>Quiet software for expensive mistakes.</h2><p class="section-intro">The work arrives as PDFs. The answer is buried in negotiated language. Altline turns that language into a checkable control for every notice that follows.</p></div><div class="features"><article class="feature"><div class="number">01 / COMPILE</div><h3>Agreement into a specification</h3><p>Key terms become structured, cited rules: margins, day counts, notice periods, availability and more.</p></article><article class="feature"><div class="number">02 / VERIFY</div><h3>Every number recomputed</h3><p>Deterministic checks independently recalculate interest and test each request against the contract.</p></article><article class="feature"><div class="number">03 / PROVE</div><h3>Exceptions with evidence</h3><p>See the broken clause, the agent's figure, the corrected arithmetic and the precise action to take.</p></article></div></section>
+  <section class="proof" id="proof"><div class="wrap proof-grid"><div><div class="kicker">One facility. One test corpus.</div><h2>Make “your agent is wrong” an evidence trail.</h2><p>Altline is designed for the work nobody has time to repeat by hand, but everybody pays for when it goes wrong.</p></div><div class="proof-stat"><div class="stat">$5.4k</div><div class="stat-label">mispricing found in the demo facility</div><hr><div class="small-stat"><span>Seeded defects caught</span><b>7 / 7</b></div><div class="small-stat"><span>Availability breach found</span><b>$1.5m</b></div></div></div></section>
+  <section class="wrap closing"><h2>Start with the notices you already receive.</h2><p>Bring six months of agent traffic. We will show you what the agreement says, what the notice says, and what the difference is worth.</p><a class="primary" href="/demo">Open the product demo</a></section>
+</main><footer class="wrap"><span>altline / private credit verification</span><span>Confidential by design</span></footer>
+</body></html>
+"""
 
 
 HTML = r"""
 <!doctype html><html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Altline</title>
+<title>Altline | Audit demo</title>
+<link rel="icon" href="data:,">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,650&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,650&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
 <style>
 :root{
   --ink:#1a1f2a; --muted:#5c6575; --line:#d8dde6; --paper:#f3f1eb;
@@ -109,13 +160,17 @@ body{
 .display{font-family:Fraunces,Georgia,serif}
 
 header{
-  padding:18px 28px;display:flex;align-items:center;gap:16px;flex-wrap:wrap;
+  padding:15px 28px;display:flex;align-items:center;gap:28px;flex-wrap:wrap;
   border-bottom:1px solid var(--line);background:rgba(255,252,247,.72);
   backdrop-filter:blur(8px);position:sticky;top:0;z-index:5;
 }
-.brand{font-family:Fraunces,Georgia,serif;font-size:28px;font-weight:650;
-  letter-spacing:-.6px;line-height:1}
+.brand,.brand:visited{display:inline-block;color:var(--ink);text-decoration:none;
+  font:700 24px/1 "Space Grotesk",sans-serif;letter-spacing:-1px}
+.brand span{color:var(--green)}
 .tagline{color:var(--muted);font-size:13px;max-width:280px}
+.nav{display:flex;gap:18px;align-items:center;color:var(--muted);font-size:12px}
+.nav a{color:inherit;text-decoration:none;padding:8px 0;border-bottom:1px solid transparent}
+.nav a:first-child,.nav a:hover{color:var(--ink);border-color:var(--red)}
 .controls{margin-left:auto;display:flex;align-items:center;gap:10px;flex-wrap:wrap}
 .controls button{
   background:var(--ink);color:#f7f4ee;border:none;border-radius:6px;
@@ -150,12 +205,19 @@ header{
 main{max-width:980px;padding:0 28px 72px;margin:0 auto}
 
 .hero{padding:48px 0 36px;animation:rise .7s ease both}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1fr) 270px;gap:42px;align-items:end}
 .hero .eyebrow{font-size:12px;letter-spacing:.08em;text-transform:uppercase;
   color:var(--muted);font-weight:600;margin-bottom:14px}
 .hero .big{font-family:Fraunces,Georgia,serif;font-size:clamp(48px,9vw,76px);
   font-weight:650;letter-spacing:-2.5px;color:var(--red);line-height:.95}
 .hero .cap{margin-top:14px;font-size:18px;max-width:34em;color:var(--ink)}
 .hero .sub{margin-top:12px;color:var(--muted);font-size:13.5px}
+.hero-panel{border-left:1px solid var(--line);padding:5px 0 5px 22px}
+.hero-panel .panel-label{font-size:10px;text-transform:uppercase;letter-spacing:.09em;color:var(--muted);font-weight:600}
+.hero-panel .panel-value{font-family:Fraunces,Georgia,serif;font-size:25px;margin:5px 0 3px}
+.hero-panel .panel-note{font-size:12px;color:var(--muted);line-height:1.45}
+.signal{height:5px;background:#e7e3da;border-radius:5px;overflow:hidden;margin:13px 0 9px}
+.signal i{display:block;height:100%;width:72%;background:var(--red);border-radius:5px}
 
 .gates{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:8px 0 28px}
 .gate{padding:14px 16px;border:1px solid var(--line);border-radius:10px;
@@ -220,15 +282,23 @@ h2{font-family:Fraunces,Georgia,serif;font-size:26px;font-weight:650;
 @keyframes rise{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
 @media(max-width:720px){
   .gates,.split{grid-template-columns:1fr}
+  .hero-grid{grid-template-columns:1fr;gap:25px}
+  .hero-panel{border-left:none;border-top:1px solid var(--line);padding:17px 0 0}
+  .nav{order:3;width:100%;border-top:1px solid var(--line);padding-top:10px}
   header{align-items:flex-start}
   .controls{margin-left:0;width:100%}
 }
 </style></head><body>
 <header>
   <div>
-    <div class="brand">Altline</div>
+    <a class="brand" href="/" aria-label="Return to Altline homepage">alt<span>line</span></a>
     <div class="tagline">We audit private credit agents&rsquo; math</div>
   </div>
+  <nav class="nav" aria-label="Primary">
+    <a href="#overview">Overview</a>
+    <a href="#agreement">Agreement</a>
+    <a href="#notices">Verification log</a>
+  </nav>
   <div class="controls">
     <span class="mode" id="mode">&mdash;</span>
     <button id="runBtn" type="button">Run with model</button>
@@ -311,13 +381,23 @@ function render(d){
   }else el.textContent='deterministic parser';
 
   let h='';
-  h+=`<section class="hero">
-    <div class="eyebrow">${esc(F.borrower||'Facility')} · ${m0(s.total_commitments)} senior facility</div>
-    <div class="big mono">${m2(s.interest_impact)}</div>
-    <div class="cap">of interest mispriced across ${s.mispriced_notices} of 4 agent
-      notices &mdash; in a single interest period, on one facility.</div>
-    <div class="sub">${s.total_breaks} findings · ${s.critical} critical · ${s.high} high ·
-      ${m0(s.availability_breach)} availability breach · leverage ${s.leverage}x</div>
+  h+=`<section class="hero" id="overview">
+    <div class="hero-grid">
+      <div>
+        <div class="eyebrow">${esc(F.borrower||'Facility')} · ${m0(s.total_commitments)} senior facility</div>
+        <div class="big mono">${m2(s.interest_impact)}</div>
+        <div class="cap">of interest mispriced across ${s.mispriced_notices} of 4 agent
+          notices &mdash; in a single interest period, on one facility.</div>
+        <div class="sub">${s.total_breaks} findings · ${s.critical} critical · ${s.high} high ·
+          ${m0(s.availability_breach)} availability breach · leverage ${s.leverage}x</div>
+      </div>
+      <aside class="hero-panel">
+        <div class="panel-label">Verification coverage</div>
+        <div class="panel-value">${s.total_breaks} findings surfaced</div>
+        <div class="signal"><i></i></div>
+        <div class="panel-note">Every notice is checked against the compiled agreement. Exceptions include the proving clause and arithmetic.</div>
+      </aside>
+    </div>
   </section>`;
 
   h+=`<div class="split">
@@ -348,7 +428,7 @@ function render(d){
     h+=`<div class="warn"><b>Fell back to deterministic.</b> ${esc(X.note)}</div>`;
 
   // Gate 1 detail
-  h+=`<h2>Gate 1 &mdash; Agreement, compiled</h2>
+  h+=`<h2 id="agreement">Gate 1 &mdash; Agreement, compiled</h2>
   <div class="lede">${X.note?esc(X.note):'Terms extracted from the PDF. Scored against the corpus seed (not the model).'}
     ${gt.score?` Extract score <b class="mono">${esc(gt.score)}</b>.`:''}</div>
   <div class="spec">`;
@@ -400,7 +480,7 @@ function render(d){
   const lead=ag.find(f=>f.breaks.some(b=>b.type==='wrong_applicable_margin'))
           || ag.find(f=>f.breaks.some(b=>b.type==='interest_miscalculation'));
 
-  h+=`<h2>Gate 2 &mdash; Notices recomputed</h2>
+  h+=`<h2 id="notices">Gate 2 &mdash; Notices recomputed</h2>
   <div class="lede">Detection vs planted defects:
     <b class="mono">${esc(det.score||'\u2014')}</b> caught.
     Arithmetic never goes through the model.</div>`;
@@ -503,4 +583,5 @@ loadOptions().then(()=>run(false,'deterministic')).catch(e=>{
 
 if __name__ == "__main__":
     import uvicorn
-    uvicorn.run(app, host="0.0.0.0", port=8000)
+    port = int(os.environ.get("PORT", "8000"))
+    uvicorn.run(app, host="0.0.0.0", port=port)
