@@ -49,6 +49,8 @@ parser runs alone and the demo still works.
 
 CLI, no server: `python3 facility.py`. More detail in [`docs/RUNNING.md`](docs/RUNNING.md).
 
+Production deploy (custom domain): [`docs/DEPLOY.md`](docs/DEPLOY.md).
+
 ## The architecture, which is the whole argument
 
 **The model reads. The engine computes.**

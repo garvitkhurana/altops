@@ -1,0 +1,18 @@
+# Render Blueprint — deploy from GitHub: Dashboard → New → Blueprint → connect repo
+services:
+  - type: web
+    name: altine
+    runtime: python
+    plan: free
+    buildCommand: pip install -r requirements.txt && python3 credit_corpus.py
+    startCommand: uvicorn app:app --host 0.0.0.0 --port $PORT
+    healthCheckPath: /
+    envVars:
+      - key: PYTHON_VERSION
+        value: "3.12.0"
+      - key: NVIDIA_API_KEY
+        sync: false
+      - key: OPENROUTER_API_KEY
+        sync: false
+      - key: ANTHROPIC_API_KEY
+        sync: false
